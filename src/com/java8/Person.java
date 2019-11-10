@@ -1,6 +1,6 @@
 package com.java8;
 
-public class Person {
+public class Person implements Comparable<Person>{
 	private int id;
 	private String name;
 	private String city;
@@ -52,6 +52,11 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", city=" + city + ", age=" + age + "]";
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		return (this.age - o.age);
 	}
 
 }
